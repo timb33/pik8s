@@ -1,0 +1,26 @@
+# This file contains a netplan-compatible configuration which cloud-init
+# will apply on first-boot. Please refer to the cloud-init documentation and
+# the netplan reference for full details:
+#
+# https://cloudinit.readthedocs.io/
+# https://netplan.io/reference
+#
+# Some additional examples are commented out below   #https://linuxconfig.org/how-to-configure-static-ip-address-on-ubuntu-18-04-bionic-beaver-linux
+
+version: 2
+ethernets:
+  eth0:
+    dhcp4: true
+    optional: true
+wifis:
+  wlan0:
+    #optional: true
+    access-points:
+      RonTheRouter:
+        password: "secretWifi"
+    dhcp4: no
+    addresses: [192.168.1.91/23]
+    gateway4: 192.168.0.1
+    nameservers:
+      addresses: [8.8.8.8,8.8.4.4]
+
