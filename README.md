@@ -16,6 +16,7 @@ Micok8s on Ubuntu on a raspberry pi cluster
 <br/>ssh onto it using the ubuntu account, the password's in your user-data file
 <br/>follow [this guide](https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes) to install microk8s, but in short...
 <br/><code>sudo echo "cgroup_enable=memory cgroup_memory=1 net.ifnames=0 dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=LABEL=writable rootfstype=ext4 elevator=deadline rootwait fixrtc" > /boot/firmware/cmdline.txt</code>
+<br/> or manually edit existing file
 <br/><code>sudo vi /boot/firmware/cmdline.txt</code>
 <br/><code>sudo reboot</code>
 <br/><code>sudo snap install microk8s --classic</code>
