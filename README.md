@@ -34,3 +34,5 @@ Micok8s on Ubuntu on a raspberry pi cluster
 ## Configure MicroK8s
 I used Portainer, which is available from the MicroK8s menu 
 TBC
+You can add an application (which is an image) which creates a container, which will be accessible only on the cluster itself. 
+portainer allows you to publish this container:port combo via some form of loadbalancer. NodePort is the easiest one to use. 
